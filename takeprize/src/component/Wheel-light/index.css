@@ -1,0 +1,92 @@
+/* 一、外层闪烁*/
+.wheel-light li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    opacity: .9;
+}
+
+.wheel-light li i {
+    position: absolute;
+    display: block;
+    width: .227273rem;
+    height: .227273rem;
+    background: #e37815;
+    border-radius: 50%;
+}
+/* 保证开始闪烁时颜色统一 */
+.wheel-light li:nth-child(2n+1) i{
+    background: #fff7e8;
+}
+
+/* 6组li，每组li中4个i，4个i分别为上下左右四个点*/
+.wheel-light li i:nth-child(1) {
+    top: .159091rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.wheel-light li i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    right: .159091rem;
+    margin: auto 0;
+}
+
+.wheel-light li i:nth-child(3) {
+    bottom: .159091rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.wheel-light li i:nth-child(4) {
+    top: 0;
+    bottom: 0;
+    left: .159091rem;
+    margin: auto 0;
+}
+/* 对第2、3、4、5、6个li分别进行旋转15、30、45、60、75度 */
+.wheel-light li:nth-child(2) {
+    -moz-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.wheel-light li:nth-child(3) {
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.wheel-light li:nth-child(4) {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.wheel-light li:nth-child(5) {
+    -moz-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.wheel-light li:nth-child(6) {
+    -moz-transform: rotate(75deg);
+    -webkit-transform: rotate(75deg);
+    -o-transform: rotate(75deg);
+    -ms-transform: rotate(75deg);
+    transform: rotate(75deg);
+}

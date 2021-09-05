@@ -1,0 +1,129 @@
+/* 三、奖品指针 */
+
+/* 中心指针外层圆盘 */
+.wheel-pointer {
+    width: 3.181818rem;
+    height: 3.181818rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 30;
+    border: .022727rem solid #e60;
+    background: linear-gradient(135deg, #ffcc00 0%, #ff8800 50%, #ffcc00 100%);
+    box-shadow:  0 0 .045455rem .045455rem rgba(0, 0, 0, .1),inset .045455rem .045455rem 0 rgba(255, 255, 255, .5);
+}
+
+/* 画出指针*/
+.wheel-pointer:before {
+    position: absolute;
+    top: -0.909091rem;
+    left: 50%;
+    display: block;
+    width: 1.363636rem;
+    height: 1.363636rem;
+    border: .022727rem solid #e60;
+    content: '';
+    box-shadow: inset .022727rem .022727rem 0 rgba(255, 255, 255, .5);
+    -moz-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -o-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -moz-transform: rotate(30deg) skewY(30deg);
+    -webkit-transform: rotate(30deg) skewY(30deg);
+    -o-transform: rotate(30deg) skewY(30deg);
+    -ms-transform: rotate(30deg) skewY(30deg);
+    transform: rotate(30deg) skewY(30deg);
+
+    background: linear-gradient(50deg, 
+     rgba(255, 73, 0, 1) 0%, 
+    rgba(255, 116, 0, 1) 45%,
+     rgba(254, 176, 86, 1) 46%, 
+     rgba(255, 135, 0, 1) 90%);
+}
+
+/* 给圆盘上色*/
+.wheel-pointer:after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset .022727rem .022727rem 0 rgba(255, 255, 255, .5);
+
+    position: relative;
+    background: -moz-linear-gradient(-45deg, #ffcc00 0%, #ff8800 50%, #ffcc00 100%);
+    background: -webkit-linear-gradient(-45deg, #ffcc00 0%, #ff8800 50%, #ffcc00 100%);
+    background: -o-linear-gradient(-45deg, #ffcc00 0%, #ff8800 50%, #ffcc00 100%);
+    background: -ms-linear-gradient(-45deg, #ffcc00 0%, #ff8800 50%, #ffcc00 100%);
+    background: linear-gradient(135deg, #ffcc00 0%, #ff8800 50%, #ffcc00 100%);
+    background: #fada90;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc00', endColorstr='#ffcc00', GradientType=1);
+}
+
+.wheel-pointer .button {
+    position: absolute;
+    z-index: 40;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+
+    color: #ff0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    
+    overflow: hidden;
+    font: 700 .318182rem/.568182rem 'microsoft yahei';
+    font-size: .363636rem;
+    
+    box-shadow: -0.022727rem -0.022727rem .227273rem rgba(255, 255, 255, .5), 0.022727rem 0.022727rem .068182rem rgba(0, 0, 0, .4), inset -0.022727rem -0.045455rem 0 #a30;
+    text-shadow: 0.022727rem 0 0 #c30, -0.022727rem 0 0 #c30, 0 0.022727rem 0 #c30, 0 -0.022727rem 0 #c30, 0 0 .068182rem #fff;
+    background: rgb(204, 51, 0);
+    background: -moz-linear-gradient(top, rgba(204, 51, 0, 1) 0%, rgba(255, 221, 0, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(204, 51, 0, 1) 0%, rgba(255, 221, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(204, 51, 0, 1) 0%, rgba(255, 221, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(204, 51, 0, 1) 0%, rgba(255, 221, 0, 1) 100%);
+    background: radial-gradient( 
+        rgb(228, 107, 80) 50%,
+        rgba(255, 0, 0, 1) 100%);
+}
+
+.wheel-pointer strong {
+    color: #fff;
+    font-size: 1rem;
+    display: block;
+    text-shadow: .045455rem 0 0 #c30, -0.045455rem 0 0 #c30, 0 .045455rem 0 #c30, 0 -0.045455rem 0 #c30, .022727rem .022727rem 0 #c30, -.022727rem -.022727rem 0 #c30, -.022727rem .022727rem 0 #c30, -.022727rem -.022727rem 0 #c30, 0 .045455rem .136364rem #a30;
+}
+
+/* 加了一个弧光*/
+.wheel-pointer .button:after {
+    position: absolute;
+    bottom: .159091rem;
+    right: .113636rem;
+    display: block;
+    width: 2.045455rem;
+    height: 2.045455rem;
+    content: '';
+    border-radius: 50%;
+    opacity: .8;
+    background: -moz-linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%);
+    background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%);
+    background: -o-linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%);
+    background: -ms-linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccffffff', endColorstr='#00ffffff', GradientType=1);
+}

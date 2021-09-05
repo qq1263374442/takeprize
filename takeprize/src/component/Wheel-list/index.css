@@ -1,0 +1,89 @@
+/*二、奖品列表 */
+
+/*.wheel-list li i背景色+此处渐变色形成好看的背景渐变色 */
+.wheel-list {
+    position: relative;
+    z-index: 20;
+    display: block;
+    width: 9.090909rem;
+    height: 9.090909rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: radial-gradient(#fff5b2 40%,
+    rgba(255, 102, 0) 85%);
+}
+
+/* 6个li为6个奖品区 */
+.wheel-list li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9.090909rem;
+    height: 4.545455rem;
+    -moz-transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+.wheel-list li:nth-child(2){
+    transform: rotate(60deg);
+}
+.wheel-list li:nth-child(3){
+    transform: rotate(120deg);
+}
+.wheel-list li:nth-child(4){
+    transform: rotate(180deg);
+}
+.wheel-list li:nth-child(5){
+    transform: rotate(240deg);
+}
+.wheel-list li:nth-child(6){
+    transform: rotate(300deg);
+}
+
+/* 此处背景色+.wheel-list的渐变色形成好看的背景色 */
+/* box-shadow形成奖品直接的分割线 */
+.wheel-list li i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    margin-left: -50%;
+    -moz-transform-origin: right bottom;
+    -webkit-transform-origin: right bottom;
+    -o-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    transform: rotate(30deg) skewY(30deg);
+    background: rgba(255, 221, 0, .3);
+    box-shadow: inset -0.022727rem 0 0 rgba(255, 153, 0, .7), inset 0 -0.022727rem 0 rgba(255, 255, 255, .4);
+}
+
+/* 奖品信息 */
+.wheel-list .prize {
+    position: relative;
+    margin: 0 auto;
+    padding-top: .454545rem;
+    width: 50%;
+    height: 1.6rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: .568182rem;
+    text-shadow: 0 .022727rem 0 rgba(255, 255, 255, .5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.wheel-list .prize p{
+    font-size: 0.5rem;
+}
+/* 奖品小图片 */
+.wheel-list .prize img{
+    width: 1rem;
+}

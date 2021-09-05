@@ -1,0 +1,30 @@
+/* 奖品闪烁 */
+.twinkle-box {
+    position: absolute;
+    top: .454545rem;
+    width: 9.090909rem;
+    height: 9.090909rem;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.twinkle{
+    width: 9.090909rem;
+    height: 4.545455rem;
+    position: absolute;
+    margin-left: -50%;
+    -moz-transform-origin: right bottom;
+    -webkit-transform-origin: right bottom;
+    -o-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    z-index: 21;
+    transform: rotate(30deg) skewY(30deg);
+
+    /* background-color: rgb(116, 207, 55,0.5); */
+}
+/* 中奖闪烁动画 */
+@keyframes twinkle
+{
+to {background-color: rgb(116, 207, 55,0.5);}
+}

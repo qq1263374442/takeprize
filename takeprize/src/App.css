@@ -1,0 +1,13 @@
+/*转盘*/
+.wheel {
+  width: 9.090909rem;
+  height: 9.090909rem;
+  background: #fada90;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  padding: .454545rem;
+  box-shadow: inset 0 .045455rem 0 .045455rem rgba(255, 255, 255, .3),
+  inset 0 -.045455rem 0 .045455rem rgba(0, 0, 0, .2), 
+  1px .045455rem .045455rem rgba(0, 0, 0, .2);
+}
