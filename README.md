@@ -1,5 +1,6 @@
 # 抽奖轮盘React版
-项目演示地址：https://mjdtest.web.cloudendpoint.cn/
+项目演示地址：https://mjdtest.web.cloudendpoint.cn/  
+后台地址：https://qc71tk.web.cloudendpoint.cn/
 
 修改1：移除了旋转插件
 
